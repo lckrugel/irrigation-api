@@ -50,6 +50,8 @@ Para executar o projeto em mode de desenvolvimento use:
 npm run dev
 ```
 
+A partir daí o projeto estará em execução em `http://localhost:3333/` ou em outra porta que tenha sido configurada.
+
 ### Executando testes
 
 Para executar os tests desenvolvidos utilize o comando:
@@ -71,3 +73,35 @@ Para executá-los garanta que esteja em um ambiente bash e execute os comandos c
 Alguns endpoints vão exigir que sejam alteradas variáveis dentro dos scripts.
 
 Estas variáveis são: `USER_TOKEN` - JWT do usuário autenticado, `PIVOT_ID` - UUID do pivô e `IRRIGATION_ID` - UUID da irrigação.
+
+## Em produção
+
+O projeto pode ser executado em modo de produção dentro de um container usando docker e docker-compose.
+
+### Configurando o ambiente
+
+Primeiramente, precisamos criar um `.env.production`. Pra isso execute:
+
+```sh
+cp .env.production.example .env.production
+```
+
+Ou simplesmente copie o conteúdo do arquivo `env.production.example` dentro de um arquivo chamado `.env.production` na raíz do projeto.
+
+Crie uma chave para a aplicação usando:
+
+```sh
+node ace generate:key --show
+```
+
+Copie a chave do terminal e cole no campo `APP_KEY` no `env.production`
+
+### Executando o docker-compose
+
+Execute o projeto com o comando:
+
+```sh
+docker compose up
+```
+
+Então o projeto será instalado e iniciará em modo de produção. A partir daí o projeto estará acessível em `http://127.0.0.1:3333` ou onde você tiver configurado.
