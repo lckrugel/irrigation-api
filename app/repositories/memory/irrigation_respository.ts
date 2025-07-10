@@ -28,6 +28,11 @@ class MemoryIrrigationRepository implements IrrigationRepositoryContract {
     this.irrigations = this.irrigations.filter((irr) => irr.id !== id)
     this.irrigationIDs.delete(id)
   }
+
+  clear(): void {
+    this.irrigations = []
+    this.irrigationIDs.clear()
+  }
 }
 
 export default new MemoryIrrigationRepository()

@@ -39,6 +39,11 @@ class MemoryPivotRepository implements PivotRepositoryContract {
     this.pivots = this.pivots.filter((pivot) => pivot.id !== id)
     this.pivotIDs.delete(id)
   }
+
+  clear(): void {
+    this.pivots = []
+    this.pivotIDs.clear()
+  }
 }
 
 export default new MemoryPivotRepository()

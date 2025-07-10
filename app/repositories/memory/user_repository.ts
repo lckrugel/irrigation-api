@@ -55,6 +55,12 @@ class MemoryUserRepository implements UserRepositoryContract {
     this.userIDs.delete(id)
     this.userEmails.delete(this.users.find((user) => user.id === id)?.email ?? '')
   }
+
+  clear(): void {
+    this.users = []
+    this.userIDs.clear()
+    this.userEmails.clear()
+  }
 }
 
 export default new MemoryUserRepository()
