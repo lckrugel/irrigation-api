@@ -1,0 +1,8 @@
+USER_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIzZTBhMWRhYi1hYTkxLTQ1OTEtYmQ4YS0yOGI4NGU2NDZjODkiLCJpYXQiOjE3NTIxNjc1MjQsImV4cCI6MTc1Mjc3MjMyNCwic3ViIjoiM2UwYTFkYWItYWE5MS00NTkxLWJkOGEtMjhiODRlNjQ2Yzg5In0.SXT1pP2oBQH5aMyQj2juM26vxrWDXFHWIVesWn6Egg8
+IRRIGATION_ID=3b3b327a-0d6e-42f9-b39c-b379a0e101fd
+
+# BUSCA IRRIGAÇÃO POR ID
+echo "Buscando irrigação por ID..."
+curl -X GET http://localhost:3333/irrigations/$IRRIGATION_ID \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $USER_TOKEN"
