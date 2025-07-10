@@ -27,7 +27,7 @@ export default class AuthController {
     if (!validation.success) {
       return response.status(400).json({
         message: 'Dados inválidos',
-        errors: z.treeifyError(validation.error),
+        errors: z.flattenError(validation.error).fieldErrors,
       })
     }
 
@@ -58,7 +58,7 @@ export default class AuthController {
     if (!validation.success) {
       return response.status(400).json({
         message: 'Dados inválidos',
-        errors: z.treeifyError(validation.error),
+        errors: z.flattenError(validation.error).fieldErrors,
       })
     }
 
