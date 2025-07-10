@@ -7,12 +7,12 @@ Desenvolvido por [Leonardo Krügel](https://www.linkedin.com/in/leonardo-krugel/
 ## Informações
 
 - Projeto utiliza como base o preset **slim** do [Adonisjs 6](https://adonisjs.com/)
-- Autenticação via JWT foi desenvolvida de forma manual, utilizando a biblioteca [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) para emitir os tokens
+- Autenticação via JWT foi desenvolvida de forma **manual**, utilizando a biblioteca [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) para emitir os tokens
 - Projeto foi desenvolvido procurando seguir os princípios **SOLID**, dentro do que faz sentido para a complexidade do projeto
-- Todos os dados são armazenados em memória apenas e, portanto, são perdidos quando a aplicação é reiniciada
-- Foram desenvolvidos testes funcionais para os endpoints da aplicação
+- Todos os dados são **armazenados em memória** apenas e, portanto, são perdidos quando a aplicação é reiniciada
+- Foram desenvolvidos **testes funcionais** para os endpoints da aplicação
 - Foi utilizado o [Zod](https://zod.dev/) como biblioteca de validação de dados
-- O projeto busca seguir as melhores práticas de progamação usando Typescript
+- O projeto busca seguir as melhores práticas de progamação usando **Typescript**
 
 ## Requisitos
 
@@ -44,7 +44,7 @@ node ace generate:key
 
 ## Execução
 
-Para executar o projeto em mode de desenvolvimento use:
+Para executar o projeto em modo de desenvolvimento use:
 
 ```sh
 npm run dev
@@ -54,7 +54,7 @@ A partir daí o projeto estará em execução em `http://localhost:3333/` ou em 
 
 ### Executando testes
 
-Para executar os tests desenvolvidos utilize o comando:
+Para executar os testes desenvolvidos utilize o comando:
 
 ```sh
 npm run test
@@ -80,7 +80,7 @@ O projeto pode ser executado em modo de produção dentro de um container usando
 
 ### Configurando o ambiente
 
-Primeiramente, precisamos criar um `.env.production`. Pra isso execute:
+Primeiramente, precisamos criar as configuração em um `.env.production`. Pra isso execute:
 
 ```sh
 cp .env.production.example .env.production
