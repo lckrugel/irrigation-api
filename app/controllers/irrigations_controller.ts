@@ -44,7 +44,6 @@ export default class IrrigationsController {
 
     const rules = z.object({
       pivotId: z.uuid({ error: 'ID do pivô deve ser um UUID' }),
-      description: z.string({ error: 'Descrição deve ser uma string' }).optional(),
       applicationAmount: z
         .number({ error: 'Quantidade de aplicação deve ser um número' })
         .positive({ error: 'Quantidade de aplicação deve ser positiva' }),
